@@ -13,6 +13,7 @@ def connect_to_db(): #polaczenie cnx i cursor
 
 
 def close_connection(cnx, cursor):
+    cnx.commit()
     cursor.close()
     cnx.close()
 
