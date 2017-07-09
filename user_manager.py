@@ -19,7 +19,7 @@ def manage_users():
     options = set_options()
     # kodzik tutaj
 
-    cnx.cursor = connect_to_db
+    cnx, cursor = connect_to_db()
 
     u = User()
     u.username = 'Janusz'
