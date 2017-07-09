@@ -1,0 +1,9 @@
+User:
+- utworzenie konta
+- zmiana hasła
+- lista użytkowników
+- usuwanie użytkowników
+
+Komunikat:
+- lista omunikatów użytkownika
+- wysyłanie komunikatów
