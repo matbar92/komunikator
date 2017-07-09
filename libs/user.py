@@ -25,6 +25,23 @@ class User:
             return True
         return False
 
+    @staticmethod
+    def load_user_by_id(cursor,id):
+        sql = 'SELECT * FROM User WHERE id=%s'
+        params = (id,)
+        cursor.execute(sql, params)
+        data = cursor.fetchone()
+
+        if data is not None:
+            u = User()
+            u.__id = data[0]
+            u.email = data[1]
+            u.username = data[2]
+            u.__hashed_password = data[3]
+            return u
+        else:
+            return None
+
 
 
 
